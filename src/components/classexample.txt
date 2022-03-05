@@ -1,0 +1,30 @@
+class Product{
+constructor(prname,id){
+    this.pname=prname
+    this.pid=id
+}
+printDetails(){
+console.log(this.pname)
+console.log(this.pid)
+}
+updateDetails(newname,newid){
+    this.pname=newname
+    this.id=newid
+}
+}
+obj1=new Product("mobile phone",78728)
+obj2=new Product("water bottle",77273872)*/
+function Product(pname,id){
+    this.pname=pname
+    this.id=id
+}
+Product.prototype.printDetails=function(){
+    console.log(this.pname)
+console.log(this.id)
+}
+Product.prototype.updateDetails=function(newname,newid){
+    this.pname=newname
+    this.id=newid
+}
+obj1=new Product("mobile phone",78728)
+obj1.printDetails()
