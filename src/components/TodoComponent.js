@@ -1,4 +1,6 @@
 import React from "react";
+import PendingComponent from "./PendingComponent"
+import CompletedComponent from "./CompletedComponent";
 const tododata=[
     {
         "id": 1,
@@ -8,7 +10,7 @@ const tododata=[
       {
         "id": 2,
         "title": "quis ut nam facilis et officia qui",
-        "completed": false
+        "completed": true
       },
       {
         "id": 3,
@@ -33,23 +35,31 @@ class TodoComponent extends React.Component{
             todos:tododata
         }
     }
+    getCompletedItems=()=>{
+      const arr=this.state.todos.filter((item)=>item.completed===true)
+      return arr
+    }
+    getPendingItems=()=>{
+      const arr=this.state.todos.filter((item)=>item.completed===false)
+      return arr
+    }
+    changeCompletionStatus=(todoID)=>{
+      const temp=[...this.state.todos]
+      const obj=temp.find((item)=>item.id===todoID)
+      obj.completed=!obj.completed
+      this.setState({todos:temp})
+    }
     render(){
         return(
             <div>
                 <h1>Todo App</h1>
-               {
-                   this.state.todos.map(
-                       (item)=>(
-                           <div>
-                            <h1>{item.title}</h1>
-{item.completed?<h2>Completed</h2>:<h3>Not completed</h3>}
-                            </div>
-                       )
-                   )
-               }
-            </div>
-
+            <PendingComponent prop1={this.getPendingItems()}></PendingComponent>  
+            <CompletedComponent prop1={this.getCompletedItems()}></CompletedComponent> 
+           
+   <button onClick={()=>this.changeCompletionStatus(5)}>check</button>
+            </div>  
         )
     }
 }
+
 export default TodoComponent
