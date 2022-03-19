@@ -12,10 +12,43 @@ import LifeCycleMethods from "./components/LifeCycleMethods"
     imglink:"https://m.media-amazon.com/images/I/61saGX0RILL._SX355_.jpg",
     price:10000
 }*/
+const tododata=[
+    {
+        "id": 1,
+        "title": "delectus aut autem",
+        "completed": false,
+        "active":true
+      },
+      {
+        "id": 2,
+        "title": "quis ut nam facilis et officia qui",
+        "completed": true,
+        "active":true
+      },
+      {
+        "id": 3,
+        "title": "fugiat veniam minus",
+        "completed": false,
+        "active":true
+      },
+      {
+        "id": 4,
+        "title": "et porro tempora",
+        "completed": true,
+        "active":true
+      },
+      {
+        "id": 5,
+        "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+        "completed": false,
+        "active":true
+      },
+]
 function App(){
     return(
         <div>
-<LifeCycleMethods prop1="two"></LifeCycleMethods>
+{/*<TodoComponent prop1={tododata}></TodoComponent>*/}
+<LifeCycleMethods></LifeCycleMethods>
   
         </div>
     )
