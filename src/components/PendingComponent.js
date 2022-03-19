@@ -7,7 +7,7 @@ const PendingComponent=(props)=>{
             props.prop1.map((item)=>(
                 <div>
                     <h3>{item.title}</h3>
-                    <button>done</button>
+                    <button onClick={()=>props.prop2(item.id)}>done</button>
                 </div>
 
             ))

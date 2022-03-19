@@ -7,7 +7,7 @@ const CompletedComponent=(props)=>{
             props.prop1.map((item)=>(
                 <div>
                     <h3>{item.title}</h3>
-                    <button>delete</button>
+                    <button onClick={()=>props.prop2(item.id)}>delete</button>
                 </div>
 
             ))
