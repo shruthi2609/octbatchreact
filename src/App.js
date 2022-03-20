@@ -48,7 +48,7 @@ function App(){
     return(
         <div>
 {/*<TodoComponent prop1={tododata}></TodoComponent>*/}
-<LifeCycleMethods></LifeCycleMethods>
+<LifeCycleMethods prop1="prop"></LifeCycleMethods>
   
         </div>
     )

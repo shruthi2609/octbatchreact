@@ -1,0 +1,16 @@
+mounting :
+const()
+ds()
+render()
+componentDidMount()
+
+updating:
+ds()
+render()
+componentDidUpdate()
+shouldcomponentupdate()
+getSnapshotBeforeUpdate() 
+
+
+unmounting:
+componentwillUnmount()

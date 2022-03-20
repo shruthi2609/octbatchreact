@@ -14,7 +14,7 @@ class TodoComponent extends React.Component{
       return {todos:props.prop1}
     }
     getCompletedItems=()=>{
-      const arr=this.state.todos.filter((item)=>item.completed===true)
+      const arr=this.state.todos.filter((item)=>item.completed===true&&item.active===true)
       return arr
     }
     getPendingItems=()=>{
@@ -38,6 +38,7 @@ class TodoComponent extends React.Component{
       this.setState({todos:temp})
     }
     render(){
+      console.log("parent - todo ")
         return(
             <div>
                 <h1>Todo App</h1>
@@ -45,8 +46,7 @@ class TodoComponent extends React.Component{
             <CompletedComponent prop1={this.getCompletedItems()} prop2={this.changeActiveStatus}></CompletedComponent> 
             <BinComponent prop1={this.getTrashItems()}
             prop2={this.changeActiveStatus}></BinComponent>
-            <BinComponent prop1={this.getTrashItems()}
-            prop2={this.changeActiveStatus}></BinComponent>
+           
             </div>  
 
         )
