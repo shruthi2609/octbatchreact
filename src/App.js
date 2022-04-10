@@ -6,6 +6,14 @@ import ToggleComponent from "./components/ToggleComponent";
 import TodoComponent from "./components/TodoComponent";
 import SampleComponent from "./components/SampleComponent";
 import LifeCycleMethods from "./components/LifeCycleMethods"
+import NewsApp from "./components/NewsApp";
+import ReactNews from "./components/ReactNews";
+import GreetComponent from "./functionalcompo/GreetComponent";
+import EffectComponent from "./functionalcompo/EffectComponent";
+import APIComponent from "./functionalcompo/APIComponent";
+import ParentComponent from "./functionalcompo/ParentComponent";
+
+import {BrowserRouter as Router,Route,Routes,Link} from "react-router-dom"
 /*const product={
     pname:"XYZ",
     plink:"https://www.amazon.in/deal/cca5e12b?smid=A14CZOWI0VEHLG&pf_rd_r=D74BC14B09MJGFHA9PGF&pf_rd_p=f690369a-7bb4-48bb-9349-f68a447ef06d&pd_rd_r=f1ca9aa0-48db-4db1-b5ba-8b28242713fc&pd_rd_w=ecFg7&pd_rd_wg=lr4U7&ref_=pd_gw_unk",
@@ -47,9 +55,25 @@ const tododata=[
 function App(){
     return(
         <div>
-{/*<TodoComponent prop1={tododata}></TodoComponent>*/}
+{/*<TodoComponent prop1={tododata}></TodoComponent>
 <LifeCycleMethods prop1="prop"></LifeCycleMethods>
-  
+    <NewsApp></NewsApp>
+    <ReactNews></ReactNews>
+    <GreetComponent></GreetComponent>
+     <APIComponent prop1="dummy"></APIComponent>
+    <EffectComponent prop1="hru" prop2="4"></EffectComponent>
+    <ParentComponent></ParentComponent> */}
+    <Router>
+   
+    <Link to="/newsapp">Login</Link>
+    <Link to="/functional">Functional comp eg</Link>
+   
+    <Routes>
+    <Route path="/newsapp" element={<NewsApp></NewsApp>} ></Route>
+    <Route path="/functional" element={<ParentComponent></ParentComponent>}></Route>
+    </Routes>
+    </Router>
+   
         </div>
     )
 }
