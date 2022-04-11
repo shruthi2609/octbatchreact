@@ -60,7 +60,7 @@ function App(){
     <NewsApp></NewsApp>
     <ReactNews></ReactNews>
     <GreetComponent></GreetComponent>
-     <APIComponent prop1="dummy"></APIComponent>
+  
     <EffectComponent prop1="hru" prop2="4"></EffectComponent>
     <ParentComponent></ParentComponent> */}
     <Router>

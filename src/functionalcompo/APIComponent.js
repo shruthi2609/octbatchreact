@@ -6,7 +6,8 @@ const APIComponent=(props)=>{
     useEffect(
        ()=>{ 
            console.log("use effect")
-           axios.get("https://hn.algolia.com/api/v1/search?query=react").then((res)=>setResult(res.data.hits)).catch((err)=>console.log(err))
+           axios.get("https://hn.algolia.com/api/v1/search?query="+search).then((res)=>setResult(res.data.hits)).catch((err)=>console.log(err))
+          return ()=>setResult([])// will run in unmount
         }
     ,[result])
     const handleSearchText=(e)=>{
