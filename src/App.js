@@ -12,8 +12,9 @@ import GreetComponent from "./functionalcompo/GreetComponent";
 import EffectComponent from "./functionalcompo/EffectComponent";
 import APIComponent from "./functionalcompo/APIComponent";
 import ParentComponent from "./functionalcompo/ParentComponent";
-
+import DemoFunctional from "./functionalcompo/DemoComponentFunctional";
 import {BrowserRouter as Router,Route,Routes,Link} from "react-router-dom"
+import DemoComponent from "./components/DemoComponent";
 /*const product={
     pname:"XYZ",
     plink:"https://www.amazon.in/deal/cca5e12b?smid=A14CZOWI0VEHLG&pf_rd_r=D74BC14B09MJGFHA9PGF&pf_rd_p=f690369a-7bb4-48bb-9349-f68a447ef06d&pd_rd_r=f1ca9aa0-48db-4db1-b5ba-8b28242713fc&pd_rd_w=ecFg7&pd_rd_wg=lr4U7&ref_=pd_gw_unk",
@@ -62,7 +63,7 @@ function App(){
     <GreetComponent></GreetComponent>
   
     <EffectComponent prop1="hru" prop2="4"></EffectComponent>
-    <ParentComponent></ParentComponent> */}
+    <ParentComponent></ParentComponent> 
     <Router>
    
     <Link to="/newsapp">Login</Link>
@@ -73,7 +74,8 @@ function App(){
     <Route path="/functional" element={<ParentComponent></ParentComponent>}></Route>
     </Routes>
     </Router>
-   
+   <DemoComponent prop1="some prop" prop2="some prop2"></DemoComponent>*/}
+   <DemoFunctional></DemoFunctional>
         </div>
     )
 }
