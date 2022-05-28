@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-const initialValue={username:"",role:""}
+const initialValue={username:"dummy@gmail.com",role:"admin"}
 const userSlice=createSlice({
     name:"user",
-    initialState:{value:initialValue},
+    initialState:{value1:initialValue,value2:"dummy"},
     reducers:{
         login:(state,action)=>{
-            state.value=action.payload
+            state.value1=action.payload
         },
         logout:(state,action)=>{
-            state.value=initialValue
+            state.value1=initialValue
         }
     }
 })
