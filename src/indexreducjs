@@ -1,15 +1,11 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import App from "./App"
-import {configureStore} from "@reduxjs/toolkit"
+import {createStore} from "redux"
 import {Provider} from "react-redux"
-import userReducer from "./reducers/userReducer"
-const centralState=configureStore(
-    {
-        reducer:{
-            user:userReducer
-        }
-    }
+import reducer from "./reducers/counterReducer"
+const centralState=createStore(
+reducer
 )
 ReactDOM.render(
 <Provider store={centralState}>
